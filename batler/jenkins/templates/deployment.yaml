@@ -27,7 +27,7 @@ spec:
         helm.sh/chart: jenkins-13.4.19
         app.kubernetes.io/component: jenkins-controller
       annotations:
-        checksum/secrets: 2e762127670521c11b01243ba093f2c62c97d6da01edd10a660b1589a8956d3d
+        checksum/secrets: 057bb9d42b553e8c1ce90c399d6f3b27952740c9d67226c4ab1d92d676e84710
     spec:
       serviceAccountName: batler-jenkins
       
