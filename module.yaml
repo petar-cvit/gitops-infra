@@ -8,6 +8,7 @@ spec:
     path: app-template
     repo: https://github.com/cyclops-ui/templates
     version: main
+  targetNamespace: cyclops
   values:
     general:
       environment:
