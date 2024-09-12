@@ -20,5 +20,3 @@ spec:
       expose: true
       port: 80
       type: ClusterIP
-    scaling:
-      replicas: 5
