@@ -1,0 +1,10 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: Module
+metadata:
+  name: other-app
+  namespace: cyclops
+spec:
+  template:
+    path: app-template
+    repo: https://github.com/cyclops-ui/templates
+    version: main

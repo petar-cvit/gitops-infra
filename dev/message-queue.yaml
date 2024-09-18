@@ -1,0 +1,10 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: Module
+metadata:
+  name: message-queue
+  namespace: cyclops
+spec:
+  template:
+    path: bitnami/rabbitmq
+    repo: https://github.com/bitnami/charts
+    version: main
