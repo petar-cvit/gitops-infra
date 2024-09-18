@@ -8,3 +8,4 @@ spec:
     path: bitnami/rabbitmq
     repo: https://github.com/bitnami/charts
     version: main
+  values: {}
