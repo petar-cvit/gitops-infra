@@ -8,4 +8,13 @@ spec:
     path: app-template
     repo: https://github.com/cyclops-ui/templates
     version: main
-  values: {}
+  values:
+    general:
+      environment: { }
+      image: nginx
+      version: 1.14.2
+    networking:
+      expose: true
+      port: 80
+      type: ClusterIP
+    scaling:
