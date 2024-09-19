@@ -7,7 +7,7 @@ spec:
   template:
     path: app-template
     repo: https://github.com/cyclops-ui/templates
-    version: main
+    version: immutable-template
   values:
     general:
       environment: { }
