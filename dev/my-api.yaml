@@ -12,7 +12,6 @@ spec:
     general:
       environment: {}
       image: nginx
-      version: 1.14.2
     networking:
       expose: true
       port: 80
