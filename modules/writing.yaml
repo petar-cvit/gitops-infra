@@ -17,19 +17,12 @@ spec:
   values:
     image: nginx
     name: demo-app
-    replicas: 4
+    replicas: 2
     service: true
     version: 1.14.2
 status:
-  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
-  managedGVRs:
-  - group: ""
-    resource: services
-    version: v1
-  - group: apps
-    resource: deployments
-    version: v1
+  iconURL: ""
+  managedGVRs: null
   reconciliationStatus:
     errors: null
-    status: succeeded
-  templateResolvedVersion: ab2756886ba4c9e0e3122e3cbb6dc0338fadc617
+  templateResolvedVersion: ""
