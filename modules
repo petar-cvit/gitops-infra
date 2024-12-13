@@ -1,0 +1,35 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: Module
+metadata:
+  annotations:
+    cyclops-ui.com/write-path: modules
+    cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
+    cyclops-ui.com/write-revision: ""
+  creationTimestamp: null
+  name: writing
+spec:
+  targetNamespace: default
+  template:
+    path: demo
+    repo: https://github.com/cyclops-ui/templates
+    sourceType: git
+    version: main
+  values:
+    image: nginx
+    name: demo-app
+    replicas: 5
+    service: true
+    version: 1.14.2
+status:
+  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
+  managedGVRs:
+  - group: ""
+    resource: services
+    version: v1
+  - group: apps
+    resource: deployments
+    version: v1
+  reconciliationStatus:
+    errors: null
+    status: succeeded
+  templateResolvedVersion: ab2756886ba4c9e0e3122e3cbb6dc0338fadc617
