@@ -6,6 +6,8 @@ metadata:
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
     cyclops-ui.com/write-revision: apps-git-writing
   creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: apps-on-branch
   name: testing-checkout
 spec:
   targetNamespace: default
@@ -17,6 +19,6 @@ spec:
   values:
     image: nginx
     name: demo-app
-    replicas: 1
+    replicas: 3
     service: true
     version: 1.14.2
