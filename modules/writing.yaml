@@ -17,12 +17,6 @@ spec:
   values:
     image: nginx
     name: demo-app
-    replicas: 2
+    replicas: 4
     service: true
     version: 1.14.2
-status:
-  iconURL: ""
-  managedGVRs: null
-  reconciliationStatus:
-    errors: null
-  templateResolvedVersion: ""
