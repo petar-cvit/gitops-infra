@@ -19,6 +19,6 @@ spec:
   values:
     image: petarcvit223/logs
     name: demo-app
-    replicas: 2
+    replicas: 4
     service: true
     version: latest
