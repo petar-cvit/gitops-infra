@@ -17,8 +17,8 @@ spec:
     sourceType: git
     version: main
   values:
-    image: nginx
+    image: petarcvit223/logs
     name: demo-app
     replicas: 2
     service: true
-    version: 1.14.2
+    version: latest
