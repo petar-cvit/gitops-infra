@@ -6,6 +6,8 @@ metadata:
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
     cyclops-ui.com/write-revision: stage-infra
   creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: my-team-apps
   name: cerbie-module
 spec:
   targetNamespace: default
@@ -17,9 +19,9 @@ spec:
   values:
     image: nginx
     name: demo-app
-    replicas: 1
+    replicas: 3
     service: true
     version: 1.14.2
 status:
-  iconURL: ""
-  templateResolvedVersion: ""
+  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
+  templateResolvedVersion: ab2756886ba4c9e0e3122e3cbb6dc0338fadc617
