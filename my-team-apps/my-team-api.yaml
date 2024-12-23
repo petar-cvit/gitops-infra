@@ -6,6 +6,8 @@ metadata:
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
     cyclops-ui.com/write-revision: testing-branch
   creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: my-team-apps
   name: my-team-api
 spec:
   targetNamespace: default
@@ -25,7 +27,7 @@ spec:
       port: 80
       type: ClusterIP
     scaling:
-      replicas: 1
+      replicas: 3
 status:
   iconURL: ""
   managedGVRs: null
