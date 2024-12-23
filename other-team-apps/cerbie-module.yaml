@@ -19,7 +19,7 @@ spec:
   values:
     image: nginx
     name: demo-app
-    replicas: 3
+    replicas: 4
     service: true
     version: 1.14.2
 status:
