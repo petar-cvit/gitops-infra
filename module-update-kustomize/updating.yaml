@@ -2,7 +2,7 @@ apiVersion: cyclops-ui.com/v1alpha1
 kind: Module
 metadata:
   annotations:
-    cyclops-ui.com/write-path: module-update-chart/templates
+    cyclops-ui.com/write-path: module-update-kustomize
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
     cyclops-ui.com/write-revision: update-image
   creationTimestamp: null
@@ -21,7 +21,7 @@ spec:
       environment:
         ENVIRONMENT: production
       image: petarcvit223/logs
-      version: 0.0.5
+      version: 0.0.7
     networking:
       expose: true
       port: 80
