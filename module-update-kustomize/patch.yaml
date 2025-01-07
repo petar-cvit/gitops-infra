@@ -1,0 +1,8 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: Module
+metadata:
+  name: updating
+spec:
+  values:
+    general:
+      version: 0.0.7

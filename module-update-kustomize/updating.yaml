@@ -1,0 +1,33 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: Module
+metadata:
+  annotations:
+    cyclops-ui.com/write-path: module-update-chart/templates
+    cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
+    cyclops-ui.com/write-revision: update-image
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: demo-app-ops
+  name: updating
+spec:
+  targetNamespace: default
+  template:
+    path: app-template
+    repo: https://github.com/cyclops-ui/templates
+    sourceType: git
+    version: main
+  values:
+    general:
+      environment:
+        ENVIRONMENT: production
+      image: petarcvit223/logs
+      version: 0.0.5
+    networking:
+      expose: true
+      port: 80
+      type: ClusterIP
+    scaling:
+      replicas: 3
+status:
+  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
+  templateResolvedVersion: ab2756886ba4c9e0e3122e3cbb6dc0338fadc617
