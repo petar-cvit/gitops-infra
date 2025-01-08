@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-demo-dpl
+spec:
+  selector:
+    matchLabels:
+      app: my-demo-dpl
+  template:
+    metadata:
+      labels:
+        app: my-demo-dpl
+    spec:
+      containers:
+        - name: my-demo-dpl
+          image: mira

@@ -2,6 +2,6 @@ resources:
   - updating.yaml
 
 images:
-  - name: cana
+  - name: mira
     newName: petarcvit223/logs
-    newTag: 0.0.7
+    newTag: 0.0.6

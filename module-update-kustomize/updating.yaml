@@ -20,7 +20,7 @@ spec:
     general:
       environment:
         ENVIRONMENT: production
-      image: petarcvit223/logs
+      image: cana
       version: 0.0.6
     networking:
       expose: true
