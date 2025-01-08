@@ -1,7 +1,8 @@
 resources:
-  - updating.yaml
-
+- updating.yaml
 images:
-  - name: mira
-    newName: petarcvit223/logs
-    newTag: 0.0.6
+- name: mira
+  newName: petarcvit223/logs
+  newTag: 0.0.6
+- name: petarcvit223/logs
+  newTag: 0.0.11
