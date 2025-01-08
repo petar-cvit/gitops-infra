@@ -21,7 +21,7 @@ spec:
       environment:
         ENVIRONMENT: production
       image: petarcvit223/logs
-      version: 0.0.7
+      version: 0.0.6
     networking:
       expose: true
       port: 80

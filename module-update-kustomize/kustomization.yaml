@@ -1,4 +1,6 @@
 resources:
   - updating.yaml
-patchesStrategicMerge:
-  - patch.yaml
+images:
+  - name: cana
+    newName: petarcvit223/logs
+    newTag: 0.0.6
