@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - petarcvit223/logs:0.0.9
