@@ -7,6 +7,9 @@ spec:
     matchLabels:
       app: my-demo-dpl
   template:
+    metadata:
+      labels:
+        app: my-demo-dpl
     spec:
       containers:
         - name: my-demo-dpl
