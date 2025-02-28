@@ -5,6 +5,7 @@ metadata:
     cyclops-ui.com/write-path: modules
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
     cyclops-ui.com/write-revision: main
+    cyclops/reconciled-at: "2025-02-28T10:59:29+01:00"
   creationTimestamp: null
   labels:
     app.kubernetes.io/instance: nekaj
