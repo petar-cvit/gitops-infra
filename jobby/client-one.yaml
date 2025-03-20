@@ -6,6 +6,8 @@ metadata:
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
     cyclops-ui.com/write-revision: main
   creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: jobby-clients
   name: client-one
 spec:
   targetNamespace: default
@@ -22,8 +24,10 @@ spec:
       version: 1.14.2
     networking:
       expose: true
-      port: 80
+      port: 8080
       type: ClusterIP
     scaling:
-      replicas: 1
-status: {}
+      replicas: 3
+status:
+  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
+  templateResolvedVersion: ab2756886ba4c9e0e3122e3cbb6dc0338fadc617
