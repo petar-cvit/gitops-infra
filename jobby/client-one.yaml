@@ -21,7 +21,7 @@ spec:
       environment:
         ENVIRONMENT: production
       image: nginx
-      version: 1.14.2
+      version: latest
     networking:
       expose: true
       port: 8080
