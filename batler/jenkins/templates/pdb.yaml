@@ -1,0 +1,17 @@
+
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: batler-jenkins
+  namespace: "default"
+  labels:
+    app.kubernetes.io/instance: batler
+    app.kubernetes.io/name: jenkins
+    app.kubernetes.io/version: 2.462.1
+    helm.sh/chart: jenkins-13.4.19
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: batler
+      app.kubernetes.io/name: jenkins
