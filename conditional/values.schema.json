@@ -20,10 +20,32 @@
     "service": {
       "description": "Expose your application",
       "type": "boolean"
+    },
+    "if": {
+      "properties": {
+        "type": { "const": "api" }
+      }
+    },
+    "then": {
+      "properties": {
+        "host": {
+          "type": "string",
+          "description": "Where to access the api"
+        }
+      }
+    },
+    "else": {
+      "properties": {
+        "cpu": {
+          "type": "string",
+          "description": "How much cpu to assign"
+        }
+      }
     }
   },
   "order": [
     "type",
+    "host",
     "replicas",
     "image",
     "version",
