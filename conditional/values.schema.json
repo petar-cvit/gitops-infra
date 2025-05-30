@@ -37,9 +37,19 @@
   },
   "else": {
     "properties": {
-      "cpu": {
-        "type": "string",
-        "description": "How much cpu to assign"
+      "scaling": {
+        "type": "object",
+        "description": "How much cpu to assign",
+        "properties": {
+          "cpu": {
+            "type": "string",
+            "description": "Where to access the api"
+          },
+          "memory": {
+            "type": "string",
+            "description": "Where to access the api"
+          }
+        }
       }
     }
   },
