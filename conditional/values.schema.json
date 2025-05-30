@@ -35,14 +35,6 @@
       }
     }
   },
-  "else": {
-    "properties": {
-      "cpu": {
-        "type": "string",
-        "description": "How much cpu to assign"
-      }
-    }
-  },
   "order": [
     "type",
     "host",
