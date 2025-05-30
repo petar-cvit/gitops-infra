@@ -40,10 +40,6 @@
       "cpu": {
         "type": "string",
         "description": "How much cpu to assign"
-      },
-      "memory": {
-        "type": "string",
-        "description": "How much memory to assign"
       }
     }
   },
