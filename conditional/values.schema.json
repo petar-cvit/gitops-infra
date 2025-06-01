@@ -22,8 +22,31 @@
       "type": "boolean"
     }
   },
+  "if": {
+    "properties": {
+      "type": { "const": "api" }
+    }
+  },
+  "then": {
+    "properties": {
+      "host": {
+        "type": "string",
+        "description": "Where to access the api"
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "cpu": {
+        "type": "string",
+        "description": "Where to access the api"
+      }
+    }
+  },
   "order": [
     "type",
+    "host",
+    "cpu",
     "replicas",
     "image",
     "version",
