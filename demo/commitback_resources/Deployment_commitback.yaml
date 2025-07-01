@@ -1,29 +1,28 @@
-Object:
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-    labels:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: commitback
+    app.kubernetes.io/managed-by: cyclops
+    cyclops.module: commitback
+  name: commitback
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
       app: commitback
-      app.kubernetes.io/managed-by: cyclops
-      cyclops.module: commitback
-    name: commitback
-  spec:
-    replicas: 1
-    selector:
-      matchLabels:
+  template:
+    metadata:
+      labels:
         app: commitback
-    template:
-      metadata:
-        labels:
-          app: commitback
-      spec:
-        containers:
-        - env:
-          - name: ENVIRONMENT
-            value: production
-          image: nginx:1.14.2
-          name: commitback
-          ports:
-          - containerPort: 80
-            name: http
-            protocol: TCP
+    spec:
+      containers:
+      - env:
+        - name: ENVIRONMENT
+          value: production
+        image: nginx:1.14.2
+        name: commitback
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
