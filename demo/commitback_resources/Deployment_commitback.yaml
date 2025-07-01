@@ -1,0 +1,99 @@
+apiVersion: cyclops-ui.com/v1alpha1
+kind: Module
+metadata:
+  annotations:
+    cyclops-ui.com/write-child-resources: "true"
+    cyclops-ui.com/write-path: demo
+    cyclops-ui.com/write-repo: https://github.com/petar-cvit/gitops-infra
+    cyclops-ui.com/write-revision: main
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"cyclops-ui.com/v1alpha1","kind":"Module","metadata":{"annotations":{"cyclops-ui.com/write-child-resources":"true","cyclops-ui.com/write-path":"demo","cyclops-ui.com/write-repo":"https://github.com/petar-cvit/gitops-infra","cyclops-ui.com/write-revision":"main"},"creationTimestamp":null,"finalizers":["cyclops-ui.com/module-resources"],"name":"commitback","namespace":"cyclops"},"spec":{"targetNamespace":"default","template":{"path":"app-template","repo":"https://github.com/cyclops-ui/templates","sourceType":"git","version":"main"},"values":{"general":{"environment":{"ENVIRONMENT":"production"},"image":"nginx","version":"1.14.2"},"networking":{"expose":true,"port":80,"type":"ClusterIP"},"scaling":{"replicas":1}}},"status":{}}
+  creationTimestamp: "2025-07-01T11:43:11Z"
+  finalizers:
+  - cyclops-ui.com/module-resources
+  generation: 1
+  managedFields:
+  - apiVersion: cyclops-ui.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cyclops-ui.com/write-child-resources: {}
+          f:cyclops-ui.com/write-path: {}
+          f:cyclops-ui.com/write-repo: {}
+          f:cyclops-ui.com/write-revision: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:finalizers:
+          .: {}
+          v:"cyclops-ui.com/module-resources": {}
+      f:spec:
+        .: {}
+        f:targetNamespace: {}
+        f:template:
+          .: {}
+          f:path: {}
+          f:repo: {}
+          f:sourceType: {}
+          f:version: {}
+        f:values:
+          .: {}
+          f:general:
+            .: {}
+            f:environment:
+              .: {}
+              f:ENVIRONMENT: {}
+            f:image: {}
+            f:version: {}
+          f:networking:
+            .: {}
+            f:expose: {}
+            f:port: {}
+            f:type: {}
+          f:scaling:
+            .: {}
+            f:replicas: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-07-01T11:43:11Z"
+  - apiVersion: cyclops-ui.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:iconURL: {}
+        f:managedGVRs: {}
+        f:reconciliationStatus:
+          .: {}
+          f:status: {}
+        f:templateResolvedVersion: {}
+    manager: ctrl
+    operation: Update
+    subresource: status
+    time: "2025-07-01T11:43:20Z"
+  name: commitback
+  namespace: cyclops
+  resourceVersion: "9022"
+  uid: 8ca2b10c-6505-45c8-a5ef-7fdcee68d1cf
+spec:
+  targetNamespace: default
+  template:
+    path: app-template
+    repo: https://github.com/cyclops-ui/templates
+    sourceType: git
+    version: main
+  values:
+    general:
+      environment:
+        ENVIRONMENT: production
+      image: nginx
+      version: 1.14.2
+    networking:
+      expose: true
+      port: 80
+      type: ClusterIP
+    scaling:
+      replicas: 1
+status:
+  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
+  templateResolvedVersion: 07fdb8bf8208eb0390a219f0c225f46a808d0da1
