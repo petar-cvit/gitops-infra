@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-api
+  labels:
+    app: my-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-api
+  template:
+    metadata:
+      name: my-api
+      labels:
+        app: my-api
+    spec:
+      containers:
+      - name: my-api
+        image: nginx:1.14.2
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
